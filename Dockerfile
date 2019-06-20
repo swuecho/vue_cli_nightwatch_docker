@@ -1,9 +1,10 @@
 FROM timbru31/java-node # selenium require java 
 
+# credit: https://gist.github.com/varyonic/dea40abcf3dd891d204ef235c6e8dd79
 
 RUN apt-get install -y wget unzip 
 RUN apt-get update -y
-RUN apt-get install -y nginx 
+RUN apt-get install -y nginx # nginx is used to serve the vue app
 
 # Set up the Chrome PPA
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
